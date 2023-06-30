@@ -129,7 +129,7 @@ main {
 }
 
 .form-row input:focus {
-    border: 1px solid #5477df;
+    outline: 1px solid #5477df;
     box-shadow: 1px 1px 3px #505050;
     transform: scale(1.03);
 }
@@ -163,4 +163,22 @@ main {
     color: var(--theme-color);
     font-weight: bold;
     text-decoration: none;
+}
+
+/* when passwords don't match */
+.error {
+    outline: 1px solid #f72e2e;
+    box-shadow: 1px 1px 3px #505050;
+}
+
+#confirm-pass.error + span {
+    position: relative;
+    font-size: 0.9rem;
+    color: red;
+}
+
+#confirm-pass.error + span::after {
+    position: absolute;
+    top: 2px;
+    content: "*The passwords do not match"
 }
